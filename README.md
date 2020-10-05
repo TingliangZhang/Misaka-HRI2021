@@ -20,3 +20,9 @@ HRI swarm platform
 ### Abstract
 
 This paper introduces a versatile swarm robotics platform for distributed algorithm test and visualization. 
+
+## BLE5.1 possibility 
+
+[Bluetooth 5.1: What’s New and Why It Matters](https://www.howtogeek.com/403606/bluetooth-5.1-whats-new-and-why-it-matters/)
+
+10cm?
