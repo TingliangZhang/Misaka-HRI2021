@@ -77,7 +77,7 @@
 %%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
-\title{Versatile swarm robotics platform for distributed algorithms developer and interaction}
+\title{Misaka: Versatile swarm robotics platform for swarm user interface development}
 
 %%
 %% The "author" command and its associated commands are used to define
@@ -119,7 +119,10 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-  This paper introduces a versatile swarm robotics platform for distributed algorithm test and visualization, also an extendable open-source open-hardware platform for developing tabletop tangible swarm interfaces.
+  This paper introduces a versatile swarm robotics platform for distributed algorithm visualization, also an extendable open-source open-hardware platform for developing tabletop tangible swarm interfaces. 
+  We provide two different version of Misaka: the commercial version and the explorer version. The commercial version is Swarm robots for distributed algorithm development, while the explorer version ,which is an open-source PCB, gives users more freedom to develop their own swarm interface for specific porposes.
+  Bluetooth 5.1 provide us with high-bandwidth communication, as well as a new method of positioning Misaka. We will integrates it into Misaka when we get the commercial model.
+
 
 \end{abstract}
 
@@ -128,39 +131,27 @@
 %% Please copy and paste the code instead of the example below.
 %%
 \begin{CCSXML}
-<ccs2012>
- <concept>
-  <concept_id>10010520.10010553.10010562</concept_id>
-  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
-  <concept_significance>500</concept_significance>
- </concept>
- <concept>
-  <concept_id>10010520.10010575.10010755</concept_id>
-  <concept_desc>Computer systems organization~Redundancy</concept_desc>
-  <concept_significance>300</concept_significance>
- </concept>
- <concept>
-  <concept_id>10010520.10010553.10010554</concept_id>
-  <concept_desc>Computer systems organization~Robotics</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
- <concept>
-  <concept_id>10003033.10003083.10003095</concept_id>
-  <concept_desc>Networks~Network reliability</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
-</ccs2012>
+  <ccs2012>
+     <concept>
+         <concept_id>10003120.10003123.10011760</concept_id>
+         <concept_desc>Human-centered computing~Systems and tools for interaction design</concept_desc>
+         <concept_significance>500</concept_significance>
+         </concept>
+     <concept>
+         <concept_id>10010583.10010584.10010587</concept_id>
+         <concept_desc>Hardware~PCB design and layout</concept_desc>
+         <concept_significance>300</concept_significance>
+         </concept>
+   </ccs2012>
 \end{CCSXML}
 
-\ccsdesc[500]{Computer systems organization~Embedded systems}
-\ccsdesc[300]{Computer systems organization~Redundancy}
-\ccsdesc{Computer systems organization~Robotics}
-\ccsdesc[100]{Networks~Network reliability}
+\ccsdesc[500]{Human-centered computing~Systems and tools for interaction design}
+\ccsdesc[300]{Hardware~PCB design and layout}
 
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
-\keywords{datasets, neural networks, gaze detection, text tagging}
+\keywords{Swarm, tangible interface, hardware platform, Human-Robot Interaction}
 
 %% A "teaser" image appears between the author and affiliation
 %% information and the body of the document, and typically spans the
@@ -179,6 +170,20 @@
 \maketitle
 
 \section{Introduction}
+
+The name of our platform, Misaka, comes from "Misaka Network" in the light novel, manga and anime series, A Certain Magical Index, and its side-story mangas and anime series, A Certain Scientific Railgun and A Certain Scientific Accelerator. The Misaka Network is a brainwave network formed between the Sisters. The Sisters are Mikoto Misaka's 20,000 clones, who can share their thoughts and memories within their communication network. Misaka Network is actually a strongly-connected distributed network. One of our platform's typical applications is verifing distributed algorithms in a decentralized network, so we choose Misaka to be our product's name.
+
+We design two different version of Misaka: the commercial version and the explorer version. 
+
+The commercial version is Swarm robots, equiped with onmi-wheels and stepper motors, and can move holonomicly and precisely. Distributed algorithms researchers can ultilize it as a fully decentralized hardware platform to test newly raised algorithms, also a visualization platform of all kinds of consensus algorithms. Furthermore, teachers can use it as great tool to visualize dynamic multiple scatterplots, and to explain theorys to their students. 
+
+The explorer version is for those researchers who want to develop tabletop swarm robots of their own. This version is a single PCB, which integrates almost all functionalities needed to develop any kinds of swarm interfaces of many porpose.
+
+Both version have the ability of adding suitable extensions on it. We also provide models adding function to it, such as computer vision, wifi, machine learning algorithms, etc.
+
+\section{Interaction Design}
+
+
 
 \section{Hardware Design}
 
@@ -280,6 +285,7 @@ Users can modify the robot for their applications by designing custom modules th
 \subsection{Explorer version}
 
 For those researchers who want to develop distributed algorithms or tabletop swarm robots of their own, we provide an open-source PCB. 
+
 It supports four kinds of different communication protocols, and integrates easy-to-use programmer and debug connector. To drive the stepper motor and DC motor, we have Powerstep01 on board with necessary components.
 To extend its function, we provide a universal interface which can communicate with other development board such as Nvidia Jetson NANO.
 
@@ -337,7 +343,26 @@ The PCB schematic is shown in Fig~\ref{fig:Explorer-schematic}, layout is shown 
 
 Real-time location systems (RTLS) are used to track and identify the location of objects in real time using "Nodes" or "tags" attached to, or embedded in, the objects tracked, and "Readers" that receive and process the wireless signals from these tags to determine their locations.\cite{costs2009real}
 
-The Bluetooth SIG presented Bluetooth 5.1 in January 2019. With Angle of Arrival (AoA) and Angle of Departure (AoD) which are used for location and tracking of devices, we can simply use BLE 5.1 as both communication and localization methods.
+The Bluetooth SIG presented Bluetooth 5.1 in January 2019. With Angle of Arrival (AoA) and Angle of Departure (AoD) which are used for location and tracking of devices, we can simply use BLE 5.1 as both communication and positioning methods.
+
+Those techniques requires one of the two communicating devices to have an array of multiple antennae, with the antenna array included in the receiving device when the AoA method is used and in the transmitting device when using AoD, as shown in Fig~\ref{fig:AODAOE}.\cite{woolley2019bluetooth}
+
+With Bluetooth 5.1, we are able to track Misaka with a small margin of location error, as low as 10cm. The accuracy will be enough for many swarm applications.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{AODAOE.pdf}
+  \caption{Angle of Arrival (AoA) and Angle of Departure (AoD)}
+  \label{fig:AODAOE}
+\end{figure}
+
+\section{Conclusion}
+
+We present Misaka, a versatile swarm robotics platform for swarm user interface development.
+
+We hope that this paper and Misaka platform will spur more research and creativity in the swarm user interface.
+
+All necessary material and documentation for implementing Misaka can be found at Github.
 
 %%
 %% The acknowledgments section is defined using the "acks" environment
