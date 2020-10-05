@@ -186,12 +186,50 @@ To make our hardware more universal, we design two different version of Misaka: 
 
 \subsection{Commercial version}
 
-The commercial version aims at HRI applications, as well as algorithms develop senarios.
+The commercial version aims at HRI applications, as well as algorithms development and visualization senarios. It is small custom-made robot as shown in Fig{fig:CommercialVersion}.
 
-The commercial version consists of a 3D printed frame, custom designed PCB, omni-directional wheels and micro stepper motors.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{DA4A4015.JPG}
+  \caption{The commercial version}
+  \label{fig:CommercialVersion}
+\end{figure}
 
+The commercial version consists of a 3D printed frame, custom designed PCB, battery, omni-directional wheels and micro stepper motors.
 
+The frame is printed using PLA(Polylactic Acid). It is carefully designed to fit the motors, wheels, and the PCB. The 3D Model of it is shown in Fig~\ref{fig:Frame}, and the CAD detail is shown in Fig~\ref{fig:CAD}.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{Frame.png}
+  \caption{3D Model of the Frame}
+  \label{fig:Frame}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{Bottom.pdf}
+  \caption{the CAD of the Frame}
+  \label{fig:CAD}
+\end{figure}
+
+Its dimensions are 100 mm in diameter and 50 mm in height. Each robot is powered by a 450mAh 2S 7.4V LiPo battery. Most of the power in the robots are consumed by the motors. The current draw of each robot is approximately 100 mA when the motors are stalled and 800 mA during typical use. Thus, with a 450 mAh battery, robots are capable of moving for half an hour, and can work even longer with BLE(Bluetooth Low Energy). 
+
+Three 38-mm-diameter omni-directional wheels are driven by micro stepper motors to precisely control the rotation angle of each wheel. The holonomic system allows the robots to move precisely and can easily respond to user interaction. The shape of holonomic chassis is shown in Fig~\ref{fig:ChassisRender}, and the real picture of it is shown in Fig~\ref{fig:chassis}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{Assembled.png}
+  \caption{Chassis render}
+  \label{fig:ChassisRender}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{Bottom-v3.jpg}
+  \caption{The holonomic chassis}
+  \label{fig:chassis}
+\end{figure}
 
 \subsection{Explorer version}
 
