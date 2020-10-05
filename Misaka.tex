@@ -215,7 +215,7 @@ The frame is printed using PLA(Polylactic Acid). It is carefully designed to fit
 
 Its dimensions are 100 mm in diameter and 50 mm in height. Each robot is powered by a 450mAh 2S 7.4V LiPo battery. Most of the power in the robots are consumed by the motors. The current draw of each robot is approximately 100 mA when the motors are stalled and 800 mA during typical use. Thus, with a 450 mAh battery, robots are capable of moving for half an hour, and can work even longer with BLE(Bluetooth Low Energy). 
 
-Three 38-mm-diameter omni-directional wheels are driven by micro stepper motors to precisely control the rotation angle of each wheel. The holonomic system allows the robots to move precisely and can easily respond to user interaction. The shape of holonomic chassis is shown in Fig~\ref{fig:ChassisRender}, and the real picture of it is shown in Fig~\ref{fig:chassis}.
+Three 38-mm-diameter omni-directional wheels are driven by micro stepper motors to precisely control the rotation angle of each wheel. To drive the robot, a motor driver chip (DRV8825) and three 2-phase 4-wire Stepper Gear Motor are used. With this combination, the robot has a maximum speed of approximately 20 cm/s. The holonomic system allows the robots to move precisely and can easily respond to user interaction. The shape of holonomic chassis is shown in Fig~\ref{fig:ChassisRender}, and the real picture of it is shown in Fig~\ref{fig:chassis}.
 
 \begin{figure}[h]
   \centering
@@ -229,6 +229,52 @@ Three 38-mm-diameter omni-directional wheels are driven by micro stepper motors 
   \includegraphics[width=\linewidth]{Bottom-v3.jpg}
   \caption{The holonomic chassis}
   \label{fig:chassis}
+\end{figure}
+
+The commercial version main circuit board is shown in Fig~\ref{fig:MainPCB}. The main processors onboard is a AVR microcontrollers(Microchip ATmega2560-16AU) that combines 86 general purpose I/O lines, 32 general purpose working registers, PWM, 4 USARTs, 16-channel 10-bit A/D converter, and a JTAG interface for on-chip debugging. ATmega2560 manages most logic computation.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{MainPCB.png}
+  \caption{The commercial version PCB}
+  \label{fig:MainPCB}
+\end{figure}
+
+The PCB schematic is shown in Fig~\ref{fig:MainPCBschematic}, layout is shown in Fig~\ref{fig:MainPCBlayout}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{MisakaPCBv3-1.pdf}
+  \caption{The commercial version PCB schematic}
+  \label{fig:MainPCBschematic}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{MainPCB.png}
+  \caption{The commercial version PCB layout}
+  \label{fig:MainPCBlayout}
+\end{figure}
+
+Eight independently WS2812B LED on PCB illuminated in full RGB using are wrapped inside the 3D printed enclosure to provide the robot’s state display as well as full color indicating, shown in Fig~\ref{fig:RGB}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{RGB.jpg}
+  \caption{The RGB LED}
+  \label{fig:RGB}
+\end{figure}
+
+Now robots communicates with each other using Digi XBee module. XBee supports mesh networking which can be decentralized. We can use this feature to develop and test distributed algorithms which are also decentralized.
+
+Users can modify the robot for their applications by designing custom modules that attach to its core module or adding powerful chips and development boards to achieve more functions, such as computer vision, wifi, machine learning algorithms, etc. Currently its compatible extensions are shown in Fig~\ref{fig:extensions}. For example, in order to give Misaka Linux development environment and capabilities of testing machine learning algorithms, we add Nvidia Jetson Nano to Misaka core through UART for high-level control and image processing. And to connect them with bluetooth and wifi, we add ESP32 modules which also interact with Misaka through serial communication.\cite{9208421}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{DA4A3991.JPG}
+  \caption{Currently compatible extensions}
+  \label{fig:extensions}
 \end{figure}
 
 \subsection{Explorer version}
