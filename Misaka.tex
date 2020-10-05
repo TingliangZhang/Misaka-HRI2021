@@ -185,6 +185,19 @@ Both versions have the ability to add suitable extensions to it. We also provide
 
 There are many tangible swarm robots such as Zooids\cite{le2016zooids} and Cellulo\cite{ozgur2017cellulo}. But none of them is both compact and omnidirectional.
 
+We learn from user experiments that most users (especially children) are used to pressing and push Misaka to move it on the surface, which prevents us from using the differential steering used by Zooids\cite{le2016zooids} or e-puck\cite{mondada2009puck}. We can only use magnetic drive technology similar to Cellulo\cite{ozgur2017cellulo} or omnidirectional wheels used by WolfBot\cite{betthauser2014wolfbot}. 
+
+After trying, we found that the speed of the magnetic drive motor has a great relationship with the magnetic strength of the magnetic ring, the remaining battery power, the friction between the magnetic ring and the shaft, and other uncontrollable factors. It is impossible to map the wheel speed of the car with the motor PWM. The time-variant mapping relationship between duty cycles made it difficult to control the direction and speed of the car, and this idea was finally abandoned.
+
+The omnidirectional wheel used by WolfBot is directly connected to the motor, which makes the chassis occupy a large area. In the end, we used a 1.5-inch onmi wheel and a miniature reflex stepper motor (the worm in the reduction gear changes the transmission direction by 180 degrees) to minimize the system, shown in Fig~\ref{fig:Motor}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{Motor-Step-1.jpg}
+  \caption{Stepper motor used in Misaka}
+  \label{fig:Motor}
+\end{figure}
+
 \section{Interaction Design}
 
 \subsection{Distributed algorithms test and visualization}
@@ -195,13 +208,22 @@ Most of the newly proposed algorithms are verified in a pure software environmen
 
 This platform makes a completely decentralized test environment possible. At the same time, since this is a convenient visual development tool, it makes interactive code writing/testing/display possible. Distributed algorithm developers can use our decentralized platform to test the feasibility of the hardware and get interactive code writing, testing, and display experience.
 
-For example, when we develop a consensus algorithm, 
+For example, when we develop a consensus algorithm, we can manipulate its iteration process using the Misaka platform, shown in Fig~\ref{fig:Iteration}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{Iteration.pdf}
+  \caption{Dynamic Iteration}
+  \label{fig:Iteration}
+\end{figure}
 
 \subsection{Teaching application}
 
 Some concepts are difficult to understand, so you can use a swarm interface to do interactive and interesting teaching.
 
 For example, a swarm system can be used to describe a scatter plot with multi-dimensional variables, etc.
+
+
 
 % \subsection{Misaka as a learning tool}
 
@@ -394,7 +416,7 @@ In summary, our contributions are:
 Furthermore, as benefits, Misaka:
 
 \begin{itemize}
-    \item are modular, can be extended with powerful platform.
+    \item are modular, can be extended with powerful platforms.
     \item can simulate decentralized communication scenarios.
     \item are small enough to coexist in large numbers
     \item are relatively cost-effective: about 30 USD each now, down to \$10 if mass manufactured.
