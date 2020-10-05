@@ -120,8 +120,8 @@
 %% article.
 \begin{abstract}
   This paper introduces a versatile swarm robotics platform for distributed algorithm visualization, also an extendable open-source open-hardware platform for developing tabletop tangible swarm interfaces. 
-  We provide two different version of Misaka: the commercial version and the explorer version. The commercial version is Swarm robots for distributed algorithm development, while the explorer version ,which is an open-source PCB, gives users more freedom to develop their own swarm interface for specific porposes.
-  Bluetooth 5.1 provide us with high-bandwidth communication, as well as a new method of positioning Misaka. We will integrates it into Misaka when we get the commercial model.
+  We provide two different versions of Misaka: the commercial version and the explorer version. The commercial version is Swarm robots for distributed algorithm development, while the explorer version, which is an open-source PCB, gives users more freedom to develop their own swarm interface for specific purposes.
+  Bluetooth 5.1 provides us with high-bandwidth communication, as well as a new method of positioning Misaka. We will integrate it into Misaka when we get the commercial model.
 
 
 \end{abstract}
@@ -171,15 +171,15 @@
 
 \section{Introduction}
 
-The name of our platform, Misaka, comes from "Misaka Network" in the light novel, manga and anime series, A Certain Magical Index, and its side-story mangas and anime series, A Certain Scientific Railgun and A Certain Scientific Accelerator. The Misaka Network is a brainwave network formed between the Sisters. The Sisters are Mikoto Misaka's 20,000 clones, who can share their thoughts and memories within their communication network. Misaka Network is actually a strongly-connected distributed network. One of our platform's typical applications is verifing distributed algorithms in a decentralized network, so we choose Misaka to be our product's name.
+The name of our platform, Misaka, comes from "Misaka Network" in the light novel, manga, and anime series, A Certain Magical Index, and its side-story mangas and anime series, A Certain Scientific Railgun and A Certain Scientific Accelerator. The Misaka Network is a brainwave network formed between the Sisters. The Sisters are Mikoto Misaka's 20,000 clones, who can share their thoughts and memories within their communication network. Misaka Network is actually a strongly-connected distributed network. One of our platform's typical applications is verifying distributed algorithms in a decentralized network, so we choose Misaka to be our product's name.
 
-We design two different version of Misaka: the commercial version and the explorer version. 
+We design two different versions of Misaka: the commercial version and the explorer version. 
 
-The commercial version is Swarm robots, equiped with onmi-wheels and stepper motors, and can move holonomicly and precisely. Distributed algorithms researchers can ultilize it as a fully decentralized hardware platform to test newly raised algorithms, also a visualization platform of all kinds of consensus algorithms. Furthermore, teachers can use it as great tool to visualize dynamic multiple scatterplots, and to explain theorys to their students. 
+The commercial version is Swarm robots, equipped with onmi-wheels and stepper motors, and can move holonomic and precisely. Distributed algorithms researchers can utilize it as a fully decentralized hardware platform to test newly raised algorithms, also a visualization platform of all kinds of consensus algorithms. Furthermore, teachers can use it as a great tool to visualize dynamic multiple scatterplots and to explain theories to their students. 
 
-The explorer version is for those researchers who want to develop tabletop swarm robots of their own. This version is a single PCB, which integrates almost all functionalities needed to develop any kinds of swarm interfaces of many porpose.
+The explorer version is for those researchers who want to develop tabletop swarm robots of their own. This version is a single PCB, which integrates almost all functionalities needed to develop any kind of swarm interface for many purposes.
 
-Both version have the ability of adding suitable extensions on it. We also provide models adding function to it, such as computer vision, wifi, machine learning algorithms, etc.
+Both versions have the ability to add suitable extensions to it. We also provide models adding function to it, such as computer vision, wifi, machine learning algorithms, etc.
 
 \section{Backgroud and related work}
 
@@ -191,15 +191,15 @@ There are many tangible swarm robots such as Zooids\cite{le2016zooids} and Cellu
 
 Distributed algorithm verification is mostly carried out in a pure software environment of a single device, such as Matlab simulation, which lacks a general hardware platform to test the feasibility of these algorithms in actual communication scenarios.
 
-Most of the newly proposed algorithms are verified in a pure software environment of a single device, without considering the communication delays in the actual hardware environment, data packet order, and poor communication connections. The ZigBee chip which used in our platform is widely used in the Internet of Things systems, and can well simulate the hardware communication environment.
+Most of the newly proposed algorithms are verified in a pure software environment of a single device, without considering the communication delays in the actual hardware environment, data packet order, and poor communication connections. The ZigBee chip which is used in our platform is widely used in the Internet of Things systems, and can well simulate the hardware communication environment.
 
-This platform makes a completely decentralized test environment possible. At the same time, since this is a convenient visual development tool, it makes interactive code writing/testing/display possible.Distributed algorithm developers can use our decentralized platform to test the feasibility of the hardware and get an interactive code writing, testing and display experience.
+This platform makes a completely decentralized test environment possible. At the same time, since this is a convenient visual development tool, it makes interactive code writing/testing/display possible. Distributed algorithm developers can use our decentralized platform to test the feasibility of the hardware and get interactive code writing, testing, and display experience.
 
 For example, when we develop a consensus algorithm, 
 
 \subsection{Teaching application}
 
-Some concepts are difficult to understand, so you can use swarm interface to do interactive and interesting teaching.
+Some concepts are difficult to understand, so you can use a swarm interface to do interactive and interesting teaching.
 
 For example, a swarm system can be used to describe a scatter plot with multi-dimensional variables, etc.
 
@@ -207,11 +207,11 @@ For example, a swarm system can be used to describe a scatter plot with multi-di
 
 \section{Hardware Design}
 
-To make our hardware more universal, we design two different version of Misaka: the commercial version and the explorer version.
+To make our hardware more universal, we design two different versions of Misaka: the commercial version and the explorer version.
 
 \subsection{Commercial version}
 
-The commercial version aims at HRI applications, as well as algorithms development and visualization senarios. It is small custom-made robot as shown in Fig{fig:CommercialVersion}.
+The commercial version aims at HRI applications, as well as algorithms development and visualization scenarios. It is a small custom-made robot as shown in Fig{fig:CommercialVersion}.
 
 \begin{figure}[h]
   \centering
@@ -220,7 +220,7 @@ The commercial version aims at HRI applications, as well as algorithms developme
   \label{fig:CommercialVersion}
 \end{figure}
 
-The commercial version consists of a 3D printed frame, custom designed PCB, battery, omni-directional wheels and micro stepper motors.
+The commercial version consists of a 3D printed frame, custom-designed PCB, battery, omni-directional wheels, and micro stepper motors.
 
 The frame is printed using PLA(Polylactic Acid). It is carefully designed to fit the motors, wheels, and the PCB. The 3D Model of it is shown in Fig~\ref{fig:Frame}, and the CAD detail is shown in Fig~\ref{fig:CAD}.
 
@@ -238,9 +238,9 @@ The frame is printed using PLA(Polylactic Acid). It is carefully designed to fit
   \label{fig:CAD}
 \end{figure}
 
-Its dimensions are 100 mm in diameter and 50 mm in height. Each robot is powered by a 450mAh 2S 7.4V LiPo battery. Most of the power in the robots are consumed by the motors. The current draw of each robot is approximately 100 mA when the motors are stalled and 800 mA during typical use. Thus, with a 450 mAh battery, robots are capable of moving for half an hour, and can work even longer with BLE(Bluetooth Low Energy). 
+Its dimensions are 100 mm in diameter and 50 mm in height. Each robot is powered by a 450mAh 2S 7.4V LiPo battery. Most of the power in the robots are consumed by the motors. The current draw of each robot is approximately 100 mA when the motors are stalled and 800 mA during typical use. Thus, with a 450 mAh battery, robots are capable of moving for half an hour and can work even longer with BLE(Bluetooth Low Energy). 
 
-Three 38-mm-diameter omni-directional wheels are driven by micro stepper motors to precisely control the rotation angle of each wheel. To drive the robot, a motor driver chip (DRV8825) and three 2-phase 4-wire Stepper Gear Motor are used. With this combination, the robot has a maximum speed of approximately 20 cm/s. The holonomic system allows the robots to move precisely and can easily respond to user interaction. The shape of holonomic chassis is shown in Fig~\ref{fig:ChassisRender}, and the real picture of it is shown in Fig~\ref{fig:chassis}.
+Three 38-mm-diameter omni-directional wheels are driven by micro stepper motors to precisely control the rotation angle of each wheel. To drive the robot, a motor driver chip (DRV8825) and three 2-phase 4-wire Stepper Gear Motor are used. With this combination, the robot has a maximum speed of approximately 20 cm/s. The holonomic system allows robots to move precisely and can easily respond to user interaction. The shape of the holonomic chassis is shown in Fig~\ref{fig:ChassisRender}, and the real picture of it is shown in Fig~\ref{fig:chassis}.
 
 \begin{figure}[h]
   \centering
@@ -256,7 +256,7 @@ Three 38-mm-diameter omni-directional wheels are driven by micro stepper motors 
   \label{fig:chassis}
 \end{figure}
 
-The commercial version main circuit board is shown in Fig~\ref{fig:MainPCB}. The main processors onboard is a AVR microcontrollers(Microchip ATmega2560-16AU) that combines 86 general purpose I/O lines, 32 general purpose working registers, PWM, 4 USARTs, 16-channel 10-bit A/D converter, and a JTAG interface for on-chip debugging. ATmega2560 manages most logic computation.
+The commercial version's main circuit board is shown in Fig~\ref{fig:MainPCB}. The main processors onboard is an AVR microcontroller (Microchip ATmega2560-16AU) that combines 86 general-purpose I/O lines, 32 general purpose working registers, PWM, 4 USARTs, 16-channel 10-bit A/D converter, and a JTAG interface for on-chip debugging. ATmega2560 manages most logic computation.
 
 
 \begin{figure}[h]
@@ -291,9 +291,9 @@ Eight independently WS2812B LED on PCB illuminated in full RGB using are wrapped
   \label{fig:RGB}
 \end{figure}
 
-Now robots communicates with each other using Digi XBee module. XBee supports mesh networking which can be decentralized. We can use this feature to develop and test distributed algorithms which are also decentralized.
+Now robots communicate with each other using the Digi XBee module. XBee supports mesh networking which can be decentralized. We can use this feature to develop and test distributed algorithms that are also decentralized.
 
-Users can modify the robot for their applications by designing custom modules that attach to its core module or adding powerful chips and development boards to achieve more functions, such as computer vision, wifi, machine learning algorithms, etc. Currently its compatible extensions are shown in Fig~\ref{fig:extensions}. For example, in order to give Misaka Linux development environment and capabilities of testing machine learning algorithms, we add Nvidia Jetson Nano to Misaka core through UART for high-level control and image processing. And to connect them with bluetooth and wifi, we add ESP32 modules which also interact with Misaka through serial communication.\cite{zhang2020misaka}
+Users can modify the robot for their applications by designing custom modules that attach to its core module or adding powerful chips and development boards to achieve more functions, such as computer vision, wifi, machine learning algorithms, etc. Currently its compatible extensions are shown in Fig~\ref{fig:extensions}. For example, in order to give Misaka Linux development environment and capabilities of testing machine learning algorithms, we add Nvidia Jetson Nano to Misaka core through UART for high-level control and image processing. And to connect them with Bluetooth and wifi, we add ESP32 modules which also interact with Misaka through serial communication.\cite{zhang2020misaka}
 
 \begin{figure}[h]
   \centering
@@ -309,7 +309,7 @@ For those researchers who want to develop distributed algorithms or tabletop swa
 It supports four kinds of different communication protocols, and integrates easy-to-use programmer and debug connector. To drive the stepper motor and DC motor, we have Powerstep01 on board with necessary components.
 To extend its function, we provide a universal interface which can communicate with other development board such as Nvidia Jetson NANO.
 
-All functionalities on board is shown below:
+All functionalities onboard are shown below:
 
 \begin{itemize}
   \item Mega2560-16AU main MCU
@@ -320,7 +320,7 @@ All functionalities on board is shown below:
   \item Downward looking infrared camera with dot paper for positioning
   \item XBee3, the main Mesh network communication
   \item Espressif ESP32, provides WiFi 5, Bluetooth, BLE communication
-  \item CP2102. We can burn programs through USB Type C port
+  \item CP2102. We can burn programs through the USB Type C port
   \item External battery power supply
   \item USB port power supply
   \item Buck DC-DC and impulse back pressure overvoltage and overcurrent protection
@@ -362,11 +362,11 @@ The PCB 3D model is shown in Fig~\ref{fig:3Dmodel}, After SMT, the PCB is shown 
 
 \section{Future RTLS with Bluetooth 5.1}
 
-Real-time location systems (RTLS) are used to track and identify the location of objects in real time using "Nodes" or "tags" attached to, or embedded in, the objects tracked, and "Readers" that receive and process the wireless signals from these tags to determine their locations.\cite{costs2009real}
+Real-time location systems (RTLS) are used to track and identify the location of objects in real-time using "Nodes" or "tags" attached to, or embedded in, the objects tracked, and "Readers" that receive and process the wireless signals from these tags to determine their locations.\cite{costs2009real}
 
 The Bluetooth SIG presented Bluetooth 5.1 in January 2019. With Angle of Arrival (AoA) and Angle of Departure (AoD) which are used for location and tracking of devices, we can simply use BLE 5.1 as both communication and positioning methods.
 
-Those techniques requires one of the two communicating devices to have an array of multiple antennae, with the antenna array included in the receiving device when the AoA method is used and in the transmitting device when using AoD, as shown in Fig~\ref{fig:AODAOE}.\cite{woolley2019bluetooth}
+Those techniques require one of the two communicating devices to have an array of multiple antennae, with the antenna array included in the receiving device when the AoA method is used and in the transmitting device when using AoD, as shown in Fig~\ref{fig:AODAOE}.\cite{woolley2019bluetooth}
 
 With Bluetooth 5.1, we are able to track Misaka with a small margin of location error, as low as 10cm. The accuracy will be enough for many swarm applications.
 
@@ -390,9 +390,9 @@ All necessary material and documentation for implementing Misaka can be found at
 %% (and NOT an unnumbered section). This ensures the proper
 %% identification of the section in the article metadata, and the
 %% consistent spelling of the heading.
-\begin{acks}
-To my girlfriend Yihan Jia, for help me during the research.
-\end{acks}
+% \begin{acks}
+% To my girlfriend, Yihan Jia, helping me during the research.
+% \end{acks}
 
 %%
 %% The next two lines define the bibliography style to be used, and
