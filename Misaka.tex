@@ -181,9 +181,29 @@ The explorer version is for those researchers who want to develop tabletop swarm
 
 Both version have the ability of adding suitable extensions on it. We also provide models adding function to it, such as computer vision, wifi, machine learning algorithms, etc.
 
+\section{Backgroud and related work}
+
+There are many tangible swarm robots such as Zooids\cite{le2016zooids} and Cellulo\cite{ozgur2017cellulo}. But none of them is both compact and omnidirectional.
+
 \section{Interaction Design}
 
+\subsection{Distributed algorithms test and visualization}
 
+Distributed algorithm verification is mostly carried out in a pure software environment of a single device, such as Matlab simulation, which lacks a general hardware platform to test the feasibility of these algorithms in actual communication scenarios.
+
+Most of the newly proposed algorithms are verified in a pure software environment of a single device, without considering the communication delays in the actual hardware environment, data packet order, and poor communication connections. The ZigBee chip which used in our platform is widely used in the Internet of Things systems, and can well simulate the hardware communication environment.
+
+This platform makes a completely decentralized test environment possible. At the same time, since this is a convenient visual development tool, it makes interactive code writing/testing/display possible.Distributed algorithm developers can use our decentralized platform to test the feasibility of the hardware and get an interactive code writing, testing and display experience.
+
+For example, when we develop a consensus algorithm, 
+
+\subsection{Teaching application}
+
+Some concepts are difficult to understand, so you can use swarm interface to do interactive and interesting teaching.
+
+For example, a swarm system can be used to describe a scatter plot with multi-dimensional variables, etc.
+
+\section{Misaka as a learning tool}
 
 \section{Hardware Design}
 
@@ -246,21 +266,21 @@ The commercial version main circuit board is shown in Fig~\ref{fig:MainPCB}. The
   \label{fig:MainPCB}
 \end{figure}
 
-The PCB schematic is shown in Fig~\ref{fig:MainPCBschematic}, layout is shown in Fig~\ref{fig:MainPCBlayout}
+% The PCB schematic is shown in Fig~\ref{fig:MainPCBschematic}, layout is shown in Fig~\ref{fig:MainPCBlayout}
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\linewidth]{MisakaPCBv3-1.pdf}
-  \caption{The commercial version PCB schematic}
-  \label{fig:MainPCBschematic}
-\end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=\linewidth]{MisakaPCBv3-1.pdf}
+%   \caption{The commercial version PCB schematic}
+%   \label{fig:MainPCBschematic}
+% \end{figure}
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\linewidth]{MainPCB.png}
-  \caption{The commercial version PCB layout}
-  \label{fig:MainPCBlayout}
-\end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=\linewidth]{MisakaPCBv3-2.pdf}
+%   \caption{The commercial version PCB layout}
+%   \label{fig:MainPCBlayout}
+% \end{figure}
 
 Eight independently WS2812B LED on PCB illuminated in full RGB using are wrapped inside the 3D printed enclosure to provide the robot’s state display as well as full color indicating, shown in Fig~\ref{fig:RGB}.
 
@@ -308,22 +328,23 @@ All functionalities on board is shown below:
   \item Support UART, I2C, SPI communication protocol expansion interface
 \end{itemize}
 
-The PCB schematic is shown in Fig~\ref{fig:Explorer-schematic}, layout is shown in Fig~\ref{fig:Explorer-layout}, and its 3D model in Fig~\ref{fig:3Dmodel}. After SMT, the PCB is shown in Fig~\ref{fig:PCBSMT}.
+% The PCB schematic is shown in Fig~\ref{fig:Explorer-schematic}, layout is shown in Fig~\ref{fig:Explorer-layout}, and its 3D model in Fig~\ref{fig:3Dmodel}. 
+The PCB 3D model is shown in Fig~\ref{fig:3Dmodel}, After SMT, the PCB is shown in Fig~\ref{fig:PCBSMT}.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\linewidth]{Misaka-v1-1.pdf}
-  \caption{Explorer version PCB schematic}
-  \label{fig:Explorer-schematic}
-\end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=\linewidth]{Misaka-v1-1.pdf}
+%   \caption{Explorer version PCB schematic}
+%   \label{fig:Explorer-schematic}
+% \end{figure}
 
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\linewidth]{Misaka-v1-2.pdf}
-  \caption{Explorer version PCB layout}
-  \label{fig:Explorer-layout}
-\end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=\linewidth]{Misaka-v1-2.pdf}
+%   \caption{Explorer version PCB layout}
+%   \label{fig:Explorer-layout}
+% \end{figure}
 
 \begin{figure}[h]
   \centering
