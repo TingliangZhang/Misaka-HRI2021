@@ -86,26 +86,36 @@
 %% "authornote" and "authornotemark" commands
 %% used to denote shared contribution to the research.
 
-% \author{Tingliang Zhang}
-% \email{ztl20@mails.tsinghua.edu.cn}
-% \orcid{0000-0002-0164-4700}
-% \affiliation{%
-%   \institution{Tsinghua University}
-%   \streetaddress{Qinghuayuan, Haidian District}
-%   \city{Beijing}
-%   \country{China}
-%   \postcode{100084}
-% }
+\author{Tingliang Zhang}
+\email{ztl20@mails.tsinghua.edu.cn}
+\orcid{0000-0002-0164-4700}
+\affiliation{%
+  \institution{Tsinghua University}
+  \streetaddress{Qinghuayuan, Haidian District}
+  \city{Beijing}
+  \country{China}
+  \postcode{100084}
+}
 
-% \author{Haipeng Mi}
-% \email{mhp@tsinghua.edu.cn}
-% \affiliation{%
-%   \institution{Tsinghua University}
-%   \streetaddress{Qinghuayuan, Haidian District}
-%   \city{Beijing}
-%   \country{China}
-%   \postcode{100084}
-% }
+\author{Haipeng Mi}
+\email{mhp@tsinghua.edu.cn}
+\affiliation{%
+  \institution{Tsinghua University}
+  \streetaddress{Qinghuayuan, Haidian District}
+  \city{Beijing}
+  \country{China}
+  \postcode{100084}
+}
+
+\author{Yihan Jia}
+\email{joeyihanjiathu@gmail.com}
+\affiliation{%
+  \institution{Tsinghua University}
+  \streetaddress{Qinghuayuan, Haidian District}
+  \city{Beijing}
+  \country{China}
+  \postcode{100084}
+}
 
 %%
 %% By default, the full list of authors will be used in the page
@@ -213,9 +223,13 @@ For example, when we develop a consensus algorithm, we can manipulate its iterat
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{Iteration.pdf}
-  \caption{Dynamic Iteration}
+  \caption{Dynamic iteration interaction of a simple consensus algorithm}
   \label{fig:Iteration}
 \end{figure}
+
+In the dynamic iterative visualization, the working surface is regarded as a two-dimensional rectangular coordinate. Each Misaka represents a node, and the vertical axis position of Misaka represents its current value, changing with each iteration. This system also simulates the communication process and performs decentralized autonomous optimization. When the number of nodes (newly added or withdrawn) or any node data changes, the system will restart dynamic iteration. The initial value can be set by the position of Misaka at the beginning, also Misaka can be manually moved at any time during or after the iteration to change the value of nodes.\cite{zhang2020misaka} 
+
+Using Misaka, developers can manipulate the algorithm, including changing values of variables, adding or deleting variables, and even pausing the iteration.
 
 \subsection{Teaching application}
 
