@@ -15,4 +15,8 @@ HRI swarm platform
 
 [Misaka: Interactive Swarm Testbed for Smart Grid Distributed Algorithm Test and Evaluation](https://ieeexplore.ieee.org/document/9208421/)
 
-## Swarm robotics platform for algurithm test and interaction
+## Versatile swarm robotics platform for distributed algorithms developer and interaction
+
+### Abstract
+
+This paper introduces a versatile swarm robotics platform for distributed algorithm test and visualization. 
