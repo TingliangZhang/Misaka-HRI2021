@@ -119,12 +119,8 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-  A clear and well-documented \LaTeX\ document is presented as an
-  article formatted for publication by ACM in a conference proceedings
-  or journal publication. Based on the ``acmart'' document class, this
-  article presents and explains many of the common variations, as well
-  as many of the formatting elements an author may use in the
-  preparation of the documentation of their work.
+  This paper introduces a versatile swarm robotics platform for distributed algorithm test and visualization, also an extendable open-source open-hardware platform for developing tabletop tangible swarm interfaces.
+
 \end{abstract}
 
 %%
@@ -183,6 +179,63 @@
 \maketitle
 
 \section{Introduction}
+
+
+\section{Explorer version}
+
+For those researcher who want to develop distributed algorithms or tabletop swarm robots of their own, we provide an open-source open-hardware platform. 
+It supports 4 kinds of different communication prototols, and integrate easy-to-use programmer and debug connector. To drive stepper motor and DC motor, we have Powerstep01 on board with neccessary coponents.
+To extend its function, we provide universal interface which can communicate with other develop board such as Nvidia Jetson NANO.
+
+All functionalities on board is shown below:
+
+\begin{itemize}
+  \item Mega2560-16AU main MCU
+  \item ATMega16U2 USB-UART
+  \item USB Type C port
+  \item PowerStep stepper motor and DC motor drive
+  \item 9 x WS2812B RGB-LED full-color light display
+  \item Downward looking infrared camera with dot paper for positioning
+  \item XBee3, the main Mesh network communication
+  \item Espressif ESP32, provides WiFi 5, Bluetooth, BLE communication
+  \item CP2102. We can burn programs through USB Type C port
+  \item External battery power supply
+  \item USB port power supply
+  \item Buck DC-DC and impulse back pressure overvoltage and overcurrent protection
+  \item Programmable pins for testing
+  \item Support UART, I2C, SPI communication protocol expansion interface
+\end{itemize}
+
+The PCB schematic is shown in Fig~\ref{fig:Explorer-schematic}, and its 3D model in Fig~\ref{fig:3Dmodel}. After SMT, the PCB is shown in Fig~\ref{fig:PCBSMT}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\columnwidth]{Misaka-v1-1.pdf}
+  \caption{Explorer version PCB schematic}
+  \label{fig:Explorer-schematic}
+\end{figure}
+
+% layout is shown in Fig~\ref{fig:Explorer-layout}, 
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=\columnwidth]{Misaka-v1-2.pdf}
+%   \caption{Explorer version PCB layout}
+%   \label{fig:Explorer-layout}
+% \end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\columnwidth]{3DModel.png}
+  \caption{3D model}
+  \label{fig:3Dmodel}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\columnwidth]{TestBoard-SMT.jpg}
+  \caption{PCB after SMT}
+  \label{fig:PCBSMT}
+\end{figure}
 
 \section{Future RTLS with Bluetooth 5.1}
 
